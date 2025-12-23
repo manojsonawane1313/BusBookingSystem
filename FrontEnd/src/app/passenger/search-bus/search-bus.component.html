@@ -1,0 +1,64 @@
+<body>
+  <form (submit)="searchBuses()" class="bus-search-form">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="source">Source:</label>
+        <input
+          type="text"
+          id="source"
+          [(ngModel)]="source"
+          name="source"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="destination">Destination:</label>
+        <input
+          type="text"
+          id="destination"
+          [(ngModel)]="destination"
+          name="destination"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          [(ngModel)]="date"
+          name="date"
+          class="form-control"
+          required
+          [min]="minDate"
+          [max]="maxDate" 
+        />
+      </div>
+    </div>
+
+    <div class="submit-button-container">
+      <button type="submit" class="btn btn-primary" [disabled]="!date">Search Buses</button>
+    </div>
+  </form>
+
+  <div class="container">
+    <div *ngIf="buses.length > 0" class="bus-list">
+      <div *ngFor="let bus of buses" class="bus-card">
+        <div>
+        </div>
+        <div class="bus-details">
+          <div class="bus-logo" alt="Bus Logo"></div>
+          <p><strong>DEPART:</strong> {{ bus.sourceTime }}</p>
+          <p><strong>ARRIVAL:</strong> {{ bus.destinationTime }}</p>
+          <p><strong>PRICE:</strong> ₹{{ bus.price }}</p>
+          <button class="btn btn-success book-btn" (click)="selectBus(bus); redirectToBookTicket()">Book</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>

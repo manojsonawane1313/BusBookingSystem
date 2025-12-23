@@ -1,0 +1,219 @@
+/*-------------------------------- seat section-------------------------------------- */
+ 
+.driver {
+  width: 70px; 
+  height: 70px; 
+  background-image: url('stear1.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  margin-bottom: 30px;
+  position: absolute; 
+  right: 0;
+  margin-right: 90px;
+}
+
+
+.seats {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+  margin: 5px;
+  margin-top: 90px;
+}
+
+.seat-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.seat {
+  margin-top: 13px;
+  width: 50px;
+  height: 50px;
+  background-size: cover; 
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-image: url('seat.png'); 
+}
+
+.seat.selected {
+  background-image: url('seat' + selectedSeat + '.png'); 
+  background-size: cover;
+}
+
+.seat:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.seat.selected {
+  background-color: #ff5722;
+  transform: scale(1.05);
+}
+
+.aisle {
+  width: 30px; 
+}
+
+p{
+  color:rgb(176, 19, 19);
+  margin-left: 110px;
+}
+
+
+
+
+
+/*-----------------------------set section end----------------------------------------- */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #425d89, #979ba0);
+  height: 100vh; 
+}
+
+.container1 {
+  position: absolute; 
+  width: 30%; 
+  padding: 20px;
+  background: linear-gradient(135deg, #83a1d1, #979ba0);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  left: 15%; 
+}
+.container {
+  position: absolute; 
+  width: 30%; 
+  padding: 20px;
+  background: linear-gradient(135deg, #83a1d1, #979ba0);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  right: 15%;
+}
+
+
+/* Heading Styles */
+h4 {
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Selected Bus Details */
+.selected-bus-details {
+  font-family: 'Arial, Helvetica, sans-serif'; /* Choosing a clean and readable font */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+.selected-bus-details h4 {
+  font-size: 1.5em; /* Slightly larger heading */
+  color: #000000; /* Darker color for contrast */
+  margin-bottom: 15px;
+}
+
+.selected-bus-details p {
+  font-size: 1em; /* Standard paragraph size */
+  margin: 5px 0; /* Adding spacing between paragraphs */
+}
+
+.selected-bus-details p strong {
+  color: #000000; /* Strong text for labels */
+}
+
+.selected-bus-details p strong::before {
+  content: ' '; /* Adding space before the strong text */
+  display: inline-block;
+  width: 100px; /* Fixed width for consistency */
+}
+
+.selected-bus-details p {
+  color: #030101; /* Subtle text color for details */
+}
+
+.selected-bus-details p.price {
+  font-weight: bold; /* Making price bold */
+  color: #007bff; /* Using a primary color for price */
+}
+
+.selected-bus-details p.price::before {
+  content: '₹'; /* Prepending currency symbol */
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+}
+
+form input {
+  width: 70%;
+  padding: 10px;
+  margin-left: 70px;
+  margin-bottom: 20px;
+  border: 1px solid #070303;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 12px;
+}
+
+form input:focus {
+  border-color: #701111;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+form .error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+button {
+  display: block;
+  background-color: #ce2e0a;
+  color: white;
+  border: 1px solid #070303;
+  padding: 6px 5px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 30%;
+  margin: 20px auto; /* Center the button */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none; /* Removes default focus outline */
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+button:hover {
+  background-color: #cb1c1c; /* Red hover color */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+button:active {
+  background-color: #8f1818; /* Darker red for click effect */
+  transform: scale(0.98); /* Slight shrink effect */
+}
+
+button:focus {
+  outline: none; /* Ensures no blue border */
+  box-shadow: none; /* Removes any focus effect */
+}

@@ -1,0 +1,57 @@
+<body>
+  <div class="container">
+    <h1>Update Bus</h1>
+    <a routerLink="/dashboard" class="dashboard">Dashboard</a>
+    <form (ngSubmit)="updateBus()">
+
+<!-- <div class="form-group">
+  <label for="busNumber">Bus Number:</label>
+  <input type="text" id="busNumber" [(ngModel)]="busDetails.busNumber" name="busNumber" class="input-field" required />
+</div> -->
+
+<div class="form-group">
+  <label for="driverName">Driver Name:</label>
+  <input type="text" id="driverName" [(ngModel)]="busDetails.driverName" name="driverName" class="input-field" required />
+</div>
+
+<div class="form-group">
+  <label for="mobile">Mobile:</label>
+  <input type="number" id="mobile" [(ngModel)]="busDetails.mobile" name="mobile" class="input-field" required />
+</div>
+
+<div class="form-group">
+  <label for="source">Source:</label>
+  <input type="text" id="source" [(ngModel)]="busDetails.source" name="source" class="input-field" required />
+</div>
+
+<div class="form-group">
+  <label for="destination">Destination:</label>
+  <input type="text" id="destination" [(ngModel)]="busDetails.destination" name="destination" class="input-field" required />
+</div>
+
+<div class="form-group">
+  <label for="route">Route:</label>
+  <input type="text" id="route" [(ngModel)]="busDetails.route" name="route" class="input-field" required />
+</div>
+
+<div class="form-group">
+  <label for="sourceTime">Source Time:</label>
+  <input type="time" id="sourceTime" [(ngModel)]="busDetails.sourceTime" name="sourceTime" class="input-field" required />
+</div>
+
+<div class="form-group">
+  <label for="destinationTime">Destination Time:</label>
+  <input type="time" id="destinationTime" [(ngModel)]="busDetails.destinationTime" name="destinationTime" class="input-field" required />
+</div>
+
+<div class="form-group">
+  <label for="price">Price:</label>
+  <input type="number" id="price" [(ngModel)]="busDetails.price" name="price" class="input-field" required />
+</div>
+
+
+<button type="submit" class="submit-button">update</button>
+</form>
+</div>
+</body>
+

@@ -1,0 +1,61 @@
+body{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #425d89, #979ba0);
+    height: 100vh; 
+  }
+.my-bookings table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #83a1d1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .my-bookings table thead {
+    background: #0b456b;
+    color: #fff;
+  }
+  
+  .my-bookings table thead tr th {
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .my-bookings table tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .my-bookings table tbody tr:hover {
+    background-color: #316f8b;
+  }
+  
+  .my-bookings table tbody tr td {
+    padding: 10px;
+    font-size: 14px;
+    color: #2c3e50;
+    border-bottom: 1px solid #000000;
+  }
+  
+  .my-bookings table tbody tr td:last-child {
+    text-align: center;
+  }
+  
+  /* No Tickets Message Styling */
+  .my-bookings [role="alert"] {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #e74c3c;
+    background-color: #fbeaea;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+  }
+  

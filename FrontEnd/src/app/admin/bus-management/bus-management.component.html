@@ -1,0 +1,60 @@
+<body>
+  <div class="container mt-4">
+  <!-- <h2 class="text-center mb-4">Bus List</h2> -->
+  
+  <div class="newbus">
+    <button routerLink="/add-bus">NewBus</button>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}
+  </div>
+  
+  <table *ngIf="buses.length > 0" >
+    <thead class="thead-dark">
+      <tr>
+        <th>Bus Id</th>
+        <th>Bus Number</th>
+        <th>Mobile</th>
+        <th>Driver Name</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Route</th>
+        <th>Source Time</th>
+        <th>Destination Time</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bus of buses">
+        <td>{{bus.id}}</td>
+        <td>{{ bus.busNumber }}</td>
+        <td>{{ bus.mobile }}</td>
+        <td>{{ bus.driverName }}</td>
+        <td>{{ bus.source }}</td>
+        <td>{{ bus.destination }}</td>
+        <td>{{ bus.route }}</td>
+        <td>{{ bus.sourceTime }}</td>
+        <td>{{ bus.destinationTime }}</td>
+        <td>{{ bus.price }}</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            (click)="editBus(bus.id, bus.busNumber ,bus.driverName, bus.source, bus.destination, bus.sourceTime, bus.destinationTime, bus.price, bus.mobile, bus.route)"
+          >
+            Edit
+          </button>
+          <button
+            class="btn btn-danger btn-sm"
+            (click)="deleteBus(bus.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="buses.length === 0" class="text-center text-muted">No buses available.</p>
+</div>
+<a routerLink="/dashboard" class="dashboard">Back to the Dashboard</a>
+</body>

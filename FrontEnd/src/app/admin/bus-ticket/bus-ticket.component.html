@@ -1,0 +1,36 @@
+  <div class="my-bookings">
+    <h2  class="text-center mb-4">Bus Ticket Details</h2>
+    <form [formGroup]="busNumberForm" (ngSubmit)="onSubmit()">
+        <!-- <label for="busNumber" class="sr-only">Bus Number:</label> -->
+        <input id="busNumber" formControlName="busNumber" class="form-control mr-2" placeholder="Fetch by Bus Number">
+      <button type="submit">Get Details</button>
+      <a routerLink="/booking-management" class="link">All Ticket</a>
+    </form>
+
+    <div *ngIf="ticketDetails && ticketDetails.length > 0">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket ID</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Seat Number</th>
+            <th>Passenger Name</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ticket of ticketDetails">
+            <td>{{ ticket.id }}</td>
+            <td>{{ ticket.source }}</td>
+            <td>{{ ticket.destination }}</td>
+            <td>{{ ticket.seatno }}</td>
+            <td>{{ ticket.name }}</td>
+            <td>{{ ticket.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+

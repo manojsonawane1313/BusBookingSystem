@@ -1,0 +1,65 @@
+<section class="signup-container">
+  <div class="signup-box">
+    <h2>Create an Account</h2>
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your username"
+          class="form-control"
+          required
+          ngModel
+          #name="ngModel"
+        />
+        <div class="error-message" *ngIf="name.invalid && name.touched">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          class="form-control"
+          required
+          email
+          ngModel
+          #email="ngModel"
+        />
+        <div class="error-message" *ngIf="email.invalid && email.touched">
+          Please enter a valid email address.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Create a password"
+          class="form-control"
+          required
+          ngModel
+          #password="ngModel"
+          minlength="6"
+        />
+        <div class="error-message" *ngIf="password.invalid && password.touched">
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="signupForm.invalid">
+        Signup
+      </button>
+    </form>
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+    <p><a routerLink="/homepage">Back to Homepage</a></p>
+  </div>
+</section>

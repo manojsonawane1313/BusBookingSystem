@@ -1,0 +1,80 @@
+/* Overall Bus Layout */
+.bus-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Driver Section */
+.driver {
+  /* background-color: #333; */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-image: url('seat.png');
+}
+
+/* Seats Section */
+.seats {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Aisle space */
+  margin: 5px;
+}
+
+/* Seat Columns */
+.seat-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Seat Styling */
+.seat {
+  margin-top: 13px;
+  width: 50px;
+  height: 50px;
+  background-size: cover; /* Ensures the background image covers the element */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-image: url('seat.png'); /* Example static path */
+}
+
+/* Dynamic Background Image for selected seat */
+.seat.selected {
+  background-image: url('seat' + selectedSeat + '.png'); /* Dynamically load selected seat image */
+  background-size: cover;
+}
+
+/* Hover effects */
+.seat:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.seat.selected {
+  background-color: #ff5722;
+  transform: scale(1.05);
+}
+
+.aisle {
+  width: 30px; 
+}

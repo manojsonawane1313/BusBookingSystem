@@ -1,0 +1,26 @@
+<body>
+<div class="confirmation-page">
+    <h1>Booking Confirmed!</h1>
+    <p>Thank you for booking with us. Your ticket details are as follows:</p>
+  
+    <div class="ticket-details">
+      <p><strong>Passenger Name:</strong> {{ passenger.name }}</p>
+      <p><strong>Email:</strong> {{ passenger.email }}</p>
+      <p><strong>Phone:</strong> {{ passenger.phone }}</p>
+      <p><strong>Source:</strong> {{ selectedBus.source }}</p>
+      <p><strong>Destination:</strong> {{ selectedBus.destination }}</p>
+      <p><strong>Date:</strong> {{ selectedBus.date }}</p>
+      <p><strong>Departure Time:</strong> {{ selectedBus.sourceTime }}</p>
+      <p><strong>Arrival Time:</strong> {{ selectedBus.destinationTime }}</p>
+      <p><strong>Price:</strong> ₹{{ selectedBus.price }}</p>
+      <p><strong>Bus Number:</strong>{{ selectedBus.busNumber }}</p>
+      <p><strong>Seat Number:</strong>{{ seatNumber }}</p>
+    </div>
+  
+    <div class="actions">
+      <button class="btn btn-primary" (click)="redirectToHome()">Home</button>
+      <!-- <button class="btn btn-primary" (click)="redirectToBookMore()">Book more</button> -->
+    </div>
+  </div>
+</body>
+  

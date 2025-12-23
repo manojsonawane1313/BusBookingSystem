@@ -1,0 +1,85 @@
+/* General styling for the signup container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #425d89, #979ba0);
+  }
+  
+  .signup-box {
+    background: linear-gradient(135deg, #83a1d1, #979ba0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .signup-box h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .signup-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .signup-box input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #470808;
+    border-radius: 4px;
+  }
+  
+  .signup-box input:focus {
+    border-color: #7d7f81;
+    outline: none;
+  }
+  
+  button {
+    display: block;
+    width: 100%; /* Full width */
+    padding: 10px 15px; /* Padding for better spacing */
+    font-size: 16px; /* Standard font size */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text color */
+    background-color: #486380; /* Primary blue background */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background change */
+  }
+  
+  button:disabled {
+    background-color: #728ca3; /* Gray background for disabled */
+    cursor: not-allowed; /* Show disabled cursor */
+  }
+  
+  button:not(:disabled):hover {
+    background-color: #3e6c9d; /* Darker blue on hover */
+  }
+  
+  
+  btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .signup-box p {
+    margin-top: 1rem;
+    color: #555;
+  }
+  
+  .signup-box a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-box a:hover {
+    text-decoration: underline;
+  }
+  

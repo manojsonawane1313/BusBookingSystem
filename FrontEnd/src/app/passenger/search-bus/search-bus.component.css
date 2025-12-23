@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #425d89, #979ba0);
+  height: 100vh; 
+}
+
+.bus-search-form {
+  background: linear-gradient(135deg, #83a1d1, #979ba0); 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #070303;
+  border-radius: 8px;
+  font-size: 14px;
+}
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #05080b;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; 
+}
+
+.form-group {
+  flex: 1; 
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  border-color: #00bcd4; 
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #9b3509;
+  border-color: #370b08;
+  padding: 12px 18px;
+  border-radius: 4px;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: #793a13;
+}
+
+.btn-primary:disabled {
+  background-color: #a76c54;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Center button container */
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.bus-list {
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.bus-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6e2323;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #79acc2; 
+}
+
+.bus-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.bus-logo {
+  width: 60px;
+  height: 60px;
+  background-image: url('bus.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.book-btn {
+  background-color: #9b3509; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.book-btn:hover {
+  background-color: #793a13;
+}
+
+@media (max-width: 768px) {
+  .bus-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

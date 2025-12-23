@@ -1,0 +1,114 @@
+/* Reset margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure it covers the full height */
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #425d89, #979ba0);
+    min-height: 100vh; /* Ensure background extends beyond viewport height */
+    display: flex; /* Center the container vertically */
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+}
+
+/* Container styling remains unchanged */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #83a1d1, #979ba0);
+  border: 1px solid #541010;
+  border-radius: 15px;
+}
+
+  
+  /* Form title styling */
+  .form-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #774c2a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #000000;
+  }
+  
+  /* Input field styling */
+  .input-field {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #432a0a;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff8e6;
+    color: #4a3b2f;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Input field focus effect */
+  .input-field:focus {
+    border-color: #774c2a;
+    box-shadow: 0 0 8px rgba(119, 76, 42, 0.5);
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    width: 70%;
+    margin:70px;
+    padding: 12px;
+    background: #850b0b;
+    color: white;    
+    display: flex; /* Center the container vertically */
+    justify-content: center; 
+    font-size: 1.2rem;
+    border: 2px solid #432a0a;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Submit button hover effect */
+  .submit-button:hover {
+    background: #582e0e;
+    transform: scale(1.05);
+  }
+
+  .submit-button:disabled {
+    background-color: #c35050; /* Gray */
+    color: #050202; /* Lighter text color */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+    opacity: 0.6; /* Make it look less prominent */
+  }
+  
+  .dashboard {
+    width: 20%;
+    right: 0%;
+    /* margin:70px; */
+    margin-left: 420px;
+    padding: 7px;
+    /* background: #850b0b; */
+    color: rgb(66, 7, 134);    
+    display: flex; 
+    justify-content: right; 
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }

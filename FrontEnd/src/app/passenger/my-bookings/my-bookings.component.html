@@ -1,0 +1,55 @@
+<div class="my-bookings ">
+  <h2 class="text-center mb-4">My Bookings</h2>
+
+  <!-- Email Input Section -->
+  <div>
+    <form (ngSubmit)="loadTickets()">
+      <label for="email" class="sr-only">Email:</label>
+      <input type="email" id="email" class="form-control mr-2" [(ngModel)]="userEmail" name="email"
+        placeholder="Enter your email" required />
+      <button type="submit">Fetch Tickets</button>
+    </form>
+  </div>
+
+  <!-- Tickets Table -->
+  <div *ngIf="tickets.length > 0; else noTickets">
+    <table>
+      <thead class="thead-dark">
+        <tr>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Date</th>
+          <th>Price</th>
+          <th>Depart</th>
+          <th>Arrival</th>
+          <th>Seat no</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets">
+          <td>{{ ticket.source }}</td>
+          <td>{{ ticket.destination }}</td>
+          <td>{{ ticket.date | date: 'mediumDate' }}</td>
+          <td>{{ ticket.price | currency:'INR' }}</td>
+          <td>{{ ticket.depart }}</td>
+          <td>{{ ticket.arrival }}</td>
+          <td>{{ ticket.seatno }}</td>
+          <td>
+            <button (click)="deleteTicket(ticket.id)" class="btn btn-danger btn-sm">
+              Cancel
+            </button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No Tickets Found Message -->
+  <ng-template #noTickets>
+    <div role="alert">
+      No bookings found for the provided email.
+    </div>
+  </ng-template>
+</div>

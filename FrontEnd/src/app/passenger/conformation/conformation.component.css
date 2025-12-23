@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #425d89, #979ba0);
+  height: 100vh;  
+}
+.confirmation-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #4f0808;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #83a1d1, #979ba0); 
+    
+  }
+  
+  .ticket-details {
+    text-align: left;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #83a1d1, #979ba0); 
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  .ticket-details p {
+    margin: 8px 0;
+    line-height: 1.5;
+    color:#090505
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }
+  
+  .actions .btn {
+    margin: 5px;
+    background-color: #8f1515;
+  }
+  

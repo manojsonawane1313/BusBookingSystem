@@ -1,0 +1,48 @@
+<section class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form #loginForm="ngForm" (ngSubmit)="onLoginSubmit(loginForm)">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            class="form-control"
+            required
+            ngModel
+            #email="ngModel"
+          />
+          <div class="error-message" *ngIf="email.invalid && email.touched">
+            Please enter a valid email address.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            class="form-control"
+            required
+            ngModel
+            #password="ngModel"
+          />
+          <div class="error-message" *ngIf="password.invalid && password.touched">
+            Password is required.
+          </div>
+        </div>
+  
+        <button type="submit" [disabled]="loginForm.invalid">
+          Login
+        </button>
+      </form>
+  
+      <p>Don't have an account? <a routerLink="/signup">Signup here</a></p>
+      <p><a routerLink="/homepage">Back to Homepage</a></p>
+    </div>
+  </section>
+  

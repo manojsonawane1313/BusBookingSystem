@@ -1,0 +1,112 @@
+<body>
+ <!-- Left-positioned container -->
+ <div class="container1">
+  <div class="driver"></div>
+      
+      <div class="seats">
+        <div class="seat-column">
+          <div 
+            class="seat" 
+            *ngFor="let seat of firstColumnSection1" 
+            [class.selected]="selectedSeat === seat" 
+            (click)="selectSeat(seat)">
+            {{ seat }}     
+          </div>
+        </div>
+    
+        <div class="seat-column">
+          <div 
+            class="seat" 
+            *ngFor="let seat of firstColumnSection2" 
+            [class.selected]="selectedSeat === seat" 
+            (click)="selectSeat(seat)">
+            {{ seat }}
+          </div>
+        </div>
+    
+        <div class="aisle"></div>
+    
+        <div class="seat-column">
+          <div 
+            class="seat" 
+            *ngFor="let seat of secondColumnSection1" 
+            [class.selected]="selectedSeat === seat" 
+            (click)="selectSeat(seat)">
+            {{ seat }}
+          </div>
+        </div>
+    
+        <div class="seat-column">
+          <div 
+            class="seat" 
+            *ngFor="let seat of secondColumnSection2" 
+            [class.selected]="selectedSeat === seat" 
+            (click)="selectSeat(seat)">
+            {{ seat }}
+          </div>
+        </div>
+      </div>
+      
+      <!-- <p *ngIf="selectedSeat">You clicked on seat number: {{ selectedSeat }}</p> -->
+    </div>
+
+
+
+  <!-- Right-positioned container -->
+  <div class="container">
+    <div *ngIf="selectedBus" class="selected-bus-details">
+      <h4>Selected Bus Details</h4>
+      <p><strong>BUS NO:</strong>  {{selectedBus.busNumber }}</p>
+      <p><strong>DATE:</strong> {{ selectedBus.date | date }}</p>
+      <p><strong>SOURCE:</strong> {{ selectedBus.source }}</p>
+      <p><strong>DESTINATION:</strong> {{ selectedBus.destination }}</p>
+      <p><strong>DEPART:</strong> {{ selectedBus.sourceTime }}</p>
+      <p><strong>ARRIVAL:</strong> {{ selectedBus.destinationTime }}</p>
+      <p><strong>PRICE:</strong> ₹{{ selectedBus.price }}</p>
+      <p><strong>SEAT NO:</strong>  {{seatNumber }}</p>
+    </div>
+
+    <form (ngSubmit)="bookTicket()" #ticketForm="ngForm">
+      <div>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="passenger.name"
+          name="name"
+          class="form-control"
+          placeholder="Name"
+        />
+      </div>
+
+      <div>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="passenger.email"
+          name="email"
+          class="form-control"
+          placeholder="Email"
+        />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          id="phone"
+          [(ngModel)]="passenger.phone"
+          name="phone"
+          class="form-control"
+          placeholder="Phone"
+        />
+      </div>
+
+      <div>
+     <p><strong>Payment method under process...</strong></p>
+      </div>
+
+      <button type="submit">Book Ticket</button>
+    </form>
+  </div>
+
+ 
+</body>

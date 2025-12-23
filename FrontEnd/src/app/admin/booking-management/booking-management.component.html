@@ -1,0 +1,51 @@
+<body>
+  <div class="my-bookings">
+    <h2 class="text-center mb-4">All Travellers</h2>
+    
+    <div *ngIf="tickets.length > 0">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Bus Number</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Date</th>
+            <th>Price</th>
+            <th>Depart</th>
+            <th>Arrival</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ticket of tickets">
+            <td>{{ ticket.id }}</td>
+            <td>{{ ticket.busNumber }}</td>
+            <td>{{ ticket.name }}</td>
+            <td>{{ ticket.email }}</td>
+            <td>{{ ticket.phone }}</td>
+            <td>{{ ticket.source }}</td>
+            <td>{{ ticket.destination }}</td>
+            <td>{{ ticket.date }}</td>
+            <td>{{ ticket.price }}</td>
+            <td>{{ ticket.depart }}</td>
+            <td>{{ ticket.arrival }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="tickets.length === 0" class="text-center mt-3">
+      <p>No tickets found!</p>
+    </div>
+  </div>
+</body>
+  
+
+
+
+
+
+<!-- --------------------------------------------------------------------------------------------------------- -->

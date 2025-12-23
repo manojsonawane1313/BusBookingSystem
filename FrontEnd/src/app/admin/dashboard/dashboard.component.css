@@ -1,0 +1,48 @@
+.home{
+  color:#721010
+}
+
+body{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #425d89, #979ba0);
+  height: 100vh; 
+}
+
+.dashboard {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dashboard-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .metric-card {
+    background: linear-gradient(135deg, #83a1d1, #979ba0);
+    border: 1px solid #4f0808;
+    margin: 40px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .action-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #871e1e;
+    color: white;
+    border: 1px solid #4f0808;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .action-button:hover {
+    background-color: #721010;
+  }
+  

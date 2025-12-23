@@ -1,0 +1,27 @@
+<body>
+  <div class="dashboard">
+    <h1>Admin Dashboard</h1>
+    <div class="dashboard-metrics">
+      <div class="metric-card">
+        <h2>Total Tickets</h2>
+        <p>{{ totalTickets }}</p>
+      </div>
+      <div class="metric-card">
+        <h2>Total Buses</h2>
+        <p>{{ totalBuses }}</p>
+      </div>
+      <div class="metric-card">
+        <h2>Total Users</h2>
+        <p>{{ totalUsers }}</p>
+      </div>
+    </div>
+  
+    <div class="dashboard-actions">
+      <button routerLink="/bus-management" class="action-button">Manage Buses</button>
+      <button routerLink="/bus-ticket" class="action-button">View Bookings</button>
+      <button routerLink="/user-management" class="action-button">Manage Users</button>
+    </div>
+  </div>
+  <p><a routerLink="/homepage" class="home">go to Homepage</a></p>
+</body>
+  

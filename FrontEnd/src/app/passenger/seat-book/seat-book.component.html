@@ -1,0 +1,58 @@
+<div class="bus-layout">
+    <!-- Driver Section -->
+    <div class="driver">Driver</div>
+    
+    <!-- Seat Layout -->
+    <div class="seats">
+      <!-- First Column Section 1 -->
+      <div class="seat-column">
+        <div 
+          class="seat" 
+          *ngFor="let seat of firstColumnSection1" 
+          [class.selected]="selectedSeat === seat" 
+          (click)="selectSeat(seat)">
+          <!-- <img [src]="'assets/seats/seat' + seat + '.png'" alt="Seat {{ seat }}"> -->
+          {{ seat }}     
+        </div>
+      </div>
+  
+      <!-- First Column Section 2 -->
+      <div class="seat-column">
+        <div 
+          class="seat" 
+          *ngFor="let seat of firstColumnSection2" 
+          [class.selected]="selectedSeat === seat" 
+          (click)="selectSeat(seat)">
+          {{ seat }}
+        </div>
+      </div>
+  
+      <!-- Aisle -->
+      <div class="aisle"></div>
+  
+      <!-- Second Column Section 1 -->
+      <div class="seat-column">
+        <div 
+          class="seat" 
+          *ngFor="let seat of secondColumnSection1" 
+          [class.selected]="selectedSeat === seat" 
+          (click)="selectSeat(seat)">
+          {{ seat }}
+        </div>
+      </div>
+  
+      <!-- Second Column Section 2 -->
+      <div class="seat-column">
+        <div 
+          class="seat" 
+          *ngFor="let seat of secondColumnSection2" 
+          [class.selected]="selectedSeat === seat" 
+          (click)="selectSeat(seat)">
+          {{ seat }}
+        </div>
+      </div>
+    </div>
+    
+    <p *ngIf="selectedSeat">You clicked on seat number: {{ selectedSeat }}</p>
+  </div>
+  

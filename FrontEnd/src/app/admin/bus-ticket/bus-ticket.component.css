@@ -1,0 +1,118 @@
+.link{
+  color:#3d0202;
+  margin-left: 70px;
+  margin-top:10px;
+  
+}
+
+.my-bookings {
+  background: linear-gradient(135deg, #425d89, #979ba0);
+  height: 100vh;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.my-bookings h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: #080b0e;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Email Input Section */
+.my-bookings form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.my-bookings input {
+  width: 40%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #39220a;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.my-bookings input[type="email"]:focus {
+  border-color: #640332;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.my-bookings label{
+  color:#050709
+}
+
+.my-bookings button {
+  background: #8f0606;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #39220a;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.my-bookings button:hover {
+  background-color: #3d0202;
+  transform: translateY(-2px);
+}
+
+/* Tickets Table Styling */
+.my-bookings table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #83a1d1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.my-bookings table thead {
+  background: #0b456b;
+  color: #fff;
+}
+
+.my-bookings table thead tr th {
+  padding: 12px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.my-bookings table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.my-bookings table tbody tr:hover {
+  background-color: #316f8b;
+}
+
+.my-bookings table tbody tr td {
+  padding: 10px;
+  font-size: 14px;
+  color: #2c3e50;
+  border-bottom: 1px solid #000000;
+}
+
+.my-bookings table tbody tr td:last-child {
+  text-align: center;
+}
+
+/* No Tickets Message Styling */
+.my-bookings [role="alert"] {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: #e74c3c;
+  background-color: #fbeaea;
+  border: 1px solid #e74c3c;
+  border-radius: 5px;
+}
